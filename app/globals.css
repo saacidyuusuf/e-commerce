@@ -45,6 +45,10 @@ body {
   align-items: center;
 }
 
+.liCart{
+  display: flex;
+}
+
 .cart{
   color: var(--second-color);
   font-size: 1.8rem;
@@ -67,6 +71,7 @@ nav {
 nav ul li {
   list-style: none;
   display: inline-block;
+  white-space: nowrap;
 }
 
 nav ul li a {
@@ -80,7 +85,7 @@ nav ul li a {
 
 @media (max-width: 900px) {
   .header {
-    margin: 1rem 1rem;
+    margin: 1rem 0.10rem;
   }
 }
 
@@ -698,13 +703,14 @@ nav ul li a {
 
 .emailContent h2{
   font-size: 3rem;
-  color: black;
+  color: var(--second-color);
 }
 
 .emailContent input{
   width: 100%;
   padding: 0.40rem;
-  border: none;
+  border-color: var(--second-color);
+  outline: none;
   border-radius: 0.30rem;
 }
 
@@ -768,5 +774,36 @@ nav ul li a {
   .footercol{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
+  }
+}
+
+/* search */
+
+.search{
+  width: 90%;
+  margin: auto;
+}
+
+.search label{
+  font-weight: 800;
+}
+
+.search input{
+  display: block;
+  padding: 12px;
+  outline: none;
+  width: 60%;
+  border-color: #28a09a;
+  border-radius: 6px;
+}
+
+.search input::placeholder{
+  font-size: 1.4rem;
+}
+
+
+@media (max-width: 900px) {
+  .search input{
+    width: 80%;
   }
 }

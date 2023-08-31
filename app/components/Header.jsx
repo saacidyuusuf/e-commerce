@@ -5,6 +5,7 @@ import { navVariants } from "../utilist/motion";
 import { FaShoppingCart } from "react-icons/fa";
 import { useContext } from "react";
 import { GlobalContextcreated } from "../context/GlobalContext";
+import SearchClothes from "./SearchClothes";
 
 
 const Header = () => {
@@ -19,9 +20,12 @@ const Header = () => {
         viewport={{ once: false, amount: 0.25 }}
         className="header"
       >
+        <div className="searchlogo">
         <Link className="logo" href="/">
           BaxarStore
         </Link>
+        </div>
+        <div className="liCart">
         <ul>
           <li>
             <Link href="/">Home</Link>
@@ -37,6 +41,7 @@ const Header = () => {
             <span className="badge">{totalclothes}</span>
             <FaShoppingCart className="cart"/>
           </Link>
+        </div>
       </motion.nav>
     </motion.header>
   );
