@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import { image1, image2, 
 image3, image4, image5 }
@@ -66,3 +67,4 @@ const Collection = () => {
 };
 
 export default Collection;
+

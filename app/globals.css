@@ -17,11 +17,12 @@
 :root {
   --second-color: #38b4d0;
   --main-color: rgba(34, 238, 170, 0.87);
-  --black-color: white; 
+  --main-color: navy;
+  --black-color: black; 
 }
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 .home {
@@ -35,8 +36,7 @@ body {
 .header {
   background: black;
   background-color: white;
-  background-color: #f8cbc5;
-  background-color: navy;
+  background-color: black;
   color: var(--black-color);
   margin-right: 2rem;
   margin-left: 2rem;
@@ -94,6 +94,13 @@ nav ul li a {
   gap: 2rem;
 }
 
+.product{
+  text-align: center;
+  color: var(--main-color);
+  font-size: 3.4rem;
+  margin-bottom: 1.2rem;
+}
+
 .dharDetails {
   width: 90%;
   margin: auto;
@@ -133,6 +140,7 @@ nav ul li a {
   position: relative;
   color: var(--black-color);
   text-align: center;
+  
 }
 
 .clothImg{
@@ -345,9 +353,9 @@ nav ul li a {
 
 .imgGeesImg {
   display: block;
-  width: 90%;
+  width: 98%;
   border-radius: 12px;
-  height: 95vh;
+  height: 100vh;
 }
 
 @media (max-width: 900px) {
@@ -410,9 +418,14 @@ nav ul li a {
 /* Testimonial */
 
 .testimonial {
-  background-color: #38b4d0;
+  /* background-color: #38b4d0;
   background-color: #f1d39d;
-  background-color: #f8cbc5;
+  background-color: #f8cbc5; */
+  background-color: #28a09a;
+  background-color: black;
+  width: 90%;
+  margin: auto;
+  border-radius: 1.4rem;
   margin-top: 3rem;
 }
 
@@ -446,7 +459,7 @@ nav ul li a {
   white-space: wrap;
   padding-top: 2rem;
   font-family: sans-serif;
-  color: black;
+  color: white;
   text-align: center;
 }
 
@@ -521,11 +534,12 @@ nav ul li a {
 
 .badge{
   position: absolute;
-  top: 4%;
+  top: 3%;
   right: 4.5%;
-  background-color: var(--main-color);
-  border-radius: 12px;
-  color: black;
+/*   background-color: var(--main-color);
+ */  border-radius: 12px;
+  color: white;
+  font-size: 1.4rem;
   padding: 4px;
 }
 
@@ -612,9 +626,8 @@ nav ul li a {
     position: absolute;
     top: 2%;
     right: 8%;
-    background-color: var(--main-color);
     border-radius: 12px;
-    color: black;
+    color: white;
     padding: 4px;
   }
 }
@@ -651,5 +664,109 @@ nav ul li a {
     top: 20%;
     left: 65%;
     width: 30%;
+  }
+}
+
+/* email */
+
+.email{
+  position: relative;
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.email h1{
+  text-align: center;
+  font-size: 4rem;
+  color: var(--main-color);
+}
+
+.emailimg{
+  width: 95%;
+  height: 95vh;
+  margin-left: 2rem;
+  border-radius: 0.50rem;
+}
+
+.emailContent{
+  position: absolute;
+  top: 45%;
+  left: 6%;
+}
+
+.emailContent h2{
+  font-size: 3rem;
+  color: black;
+}
+
+.emailContent input{
+  width: 100%;
+  padding: 0.40rem;
+  border: none;
+  border-radius: 0.30rem;
+}
+
+.emailContent label{
+  color: var(--second-color);
+  font-size: 1.4rem;
+}
+
+.emailbtn{
+  padding: 10px 20px;
+  margin-top: 0.30rem;
+  font-size: 1.2rem;
+  border-radius: 0.40rem;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .emailimg{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/*  footer*/
+
+.footer{
+  background-color: var(--main-color);
+  width: 100%;
+  margin: auto;
+  margin-top: 1.4rem;
+}
+
+.footers{
+  text-align: center;
+  margin-top: 0.30rem;
+  padding: 1rem;
+}
+.footers h2{
+  margin-bottom: 0.35rem;
+  color: var(--second-color);
+}
+
+.footers ul li{
+  list-style: none;
+  align-items: center;
+  color: white;
+  padding: 0.20rem 0;
+}
+
+.icons{
+  padding: 0.20rem;
+  font-size: 2.5rem;
+}
+
+.footercol{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+@media (max-width: 900px) {
+  .footercol{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
   }
 }

@@ -3,7 +3,7 @@
 import { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 import { image1, image5, image2, image4, image3 } from "../assets/images/index";
-import { dharbadan } from "../clothes/dhar";
+import { dharbadan } from "../collection/dhar";
 
 const initialcontext = {
   dharbadan: [

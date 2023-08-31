@@ -1,8 +1,10 @@
 'use client'
 import Hero from "./components/Hero";
-import Collection from "./components/Collection";
+import Clothes from "./components/Clothes";
 import Sliders from "./components/Sliders";
 import Testimonial from './components/Testimonial'
+import Emailband from "./components/Emailband";
+import Footer from "./components/Footer";
 
 const HomePage = () => {
 
@@ -11,9 +13,11 @@ const HomePage = () => {
     <section className="heroHomePage">
       <Hero/>
     </section>
-    <Collection/>
+    <Clothes/>
     <Sliders/>
     <Testimonial/>
+    <Emailband/>
+    <Footer/>
     </>
   );
 };

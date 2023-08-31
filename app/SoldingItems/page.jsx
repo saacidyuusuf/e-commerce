@@ -1,7 +1,6 @@
 "use client";
 import { useContext } from "react";
 import Image from "next/image";
-import { image1 } from "../images";
 import TotalCart from "../components/TotalCart";
 import { GlobalContextcreated } from "../context/GlobalContext";
 
