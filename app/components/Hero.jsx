@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { image11,} from "../assets/images/index";
 import { textVariant, slideIn, staggerContainer} from "../utilist/motion";
 import Image from "next/image";
+import HeroBottom from "./HeroBottomitems";
 
 const Hero = () => {
   return (
@@ -27,6 +28,7 @@ const Hero = () => {
           </motion.p>
         </motion.div>
       </div>
+      <HeroBottom/>
     </section>
   );
 };

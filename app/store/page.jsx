@@ -1,9 +1,10 @@
+'use client'
 import { useState } from "react";
-import { dharbadan } from "../collection/dhar";
-import Dharlist from "./Dharlist";
+import { dharbadan } from "./dhar";
+import Dharlist from "../components/Dharlist";
 import { navVariants } from "../utilist/motion";
 import { motion } from "framer-motion";
-import SearchClothes from "./SearchClothes";
+import SearchClothes from "../components/SearchClothes";
 
 const Page = () => {
   const [query, setquery] = useState("");
@@ -47,3 +48,4 @@ const Page = () => {
 };
 
 export default Page;
+

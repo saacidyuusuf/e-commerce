@@ -7,8 +7,6 @@ import { GlobalContextcreated } from "../context/GlobalContext";
 const CartPage = () => {
   const { dharbadan, totalclothes, removeClothes } =
     useContext(GlobalContextcreated);
-
-    
     
   return (
     <>

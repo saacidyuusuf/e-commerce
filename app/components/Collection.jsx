@@ -1,10 +1,7 @@
-'use client'
-import Image from 'next/image';
-import { image1, image2, 
-image3, image4, image5 }
- from "../images/index";
- import { motion } from "framer-motion";
-import { slideIn} from "../utilist/motion";
+import Image from "next/image";
+import { image1, image2, image3, image4, image5 } from "../images/index";
+import { motion } from "framer-motion";
+import { slideIn } from "../utilist/motion";
 
 const Collection = () => {
   return (
@@ -14,7 +11,7 @@ const Collection = () => {
         <div className="collections">
           <div className="collection-haye">
             <div className="collection">
-              <Image src={image5} className='collectionImg' alt="" />
+              <Image src={image5} className="collectionImg" alt="" />
               <h3>Xamar Wayne</h3>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -22,7 +19,7 @@ const Collection = () => {
               </p>
             </div>
             <div className="collection">
-              <Image src={image1} alt="" className='collectionImg' />
+              <Image src={image1} alt="" className="collectionImg" />
               <h3>Xamar Wayne</h3>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -30,7 +27,7 @@ const Collection = () => {
               </p>
             </div>
             <div className="collection">
-              <Image src={image2} alt="" className='collectionImg' />
+              <Image src={image2} alt="" className="collectionImg" />
               <h3>Xamar Wayne</h3>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -38,7 +35,7 @@ const Collection = () => {
               </p>
             </div>
             <div className="collection">
-              <Image src={image3} alt=""  className='collectionImg'/>
+              <Image src={image3} alt="" className="collectionImg" />
               <h3>Xamar Wayne</h3>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -46,12 +43,14 @@ const Collection = () => {
               </p>
             </div>
           </div>
-          <div 
-           variants={slideIn(("left", "tween", 0.12, 0.5))}
-           initial="hidden"
-           whileInView="show"
-          className="imgGees" data-aos="slide-left">
-            <Image src={image4} alt=""  className='imgGeesImg'/>
+          <motion.div
+            variants={slideIn("right", "tween", 0.12, 0.9)}
+            initial="hidden"
+            whileInView="show"
+            className="imgGees"
+            data-aos="slide-left"
+          >
+            <Image src={image4} alt="" className="imgGeesImg" />
             <div className="imgGeesText">
               <h3>Xamar Wayne</h3>
               <p>
@@ -59,7 +58,7 @@ const Collection = () => {
                 Quibusdam, vitae?
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -67,4 +66,3 @@ const Collection = () => {
 };
 
 export default Collection;
-

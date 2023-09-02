@@ -17,10 +17,6 @@ const Sliders = () => {
   return (
     <div className="sliders">
       <motion.h1
-      variants={navVariants}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
       >Latest Collection</motion.h1>
       <motion.div
         ref={slide}
@@ -37,7 +33,12 @@ const Sliders = () => {
         >
           {images.map((image, index) => {
             return (
-              <motion.div key={index} className="item">
+              <motion.div 
+              variants={navVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.25 }}
+              key={index} className="item">
                 <Image src={image} alt="" />
               </motion.div>
             );
