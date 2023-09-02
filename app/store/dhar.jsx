@@ -42,7 +42,7 @@ export  const  dharbadan = [
     img: image5,
   },
   {
-    id: 5,
+    id: 6,
     category: "Dhar Nin",
     name: "Saacid",
     desc: 'dhar xayaat Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, commodi laudantium possimus qui omnis porro nesciunt sapiente aliquam ex magni? ',

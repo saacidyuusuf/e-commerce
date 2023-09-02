@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ContextProvider>
           <Header/>
+        <ContextProvider>
           <main className="container">{children}</main>
         </ContextProvider>
       </body>

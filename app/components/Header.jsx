@@ -14,10 +14,10 @@ const Header = () => {
   return (
     <motion.header>
       <motion.nav
-        variants={navVariants}
+       /*  variants={navVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.25 }} */
         className="header"
       >
         <div className="searchlogo">

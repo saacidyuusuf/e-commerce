@@ -330,18 +330,22 @@ nav ul li a {
 .heroBottoms {
   display: flex;
   justify-content: center;
+  margin-top: 8rem;
 }
 
 .herobottomImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 20%;
-  height: 20vh;
-  border-radius: 12px;
+  height: 10vh;
+  border-radius: 50%;
   aspect-ratio: 1/1;
 }
 
 .heroBottom {
-  padding: 0.30rem;
-  align-items: center;
+  text-align: center;
+  padding: 0.20rem;
   background-color: #161313;
   border-radius: 1.2rem;
   margin: 1rem;

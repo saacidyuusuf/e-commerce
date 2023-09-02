@@ -5,6 +5,7 @@ const DharDetails = () => {
   return (
     <section className="dharDetails">
     {dharbadan.map((dhar, index) => {
+      return(
       <div className="dharInfo" key={index.id}>
         <div className="dharText">
           <h1>{dhar.name}</h1>
@@ -22,6 +23,7 @@ const DharDetails = () => {
         </div>
         </div>
       </div>
+      )
     })}
     </section>
   );
