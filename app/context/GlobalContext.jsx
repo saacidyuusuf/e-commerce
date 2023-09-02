@@ -3,7 +3,6 @@
 import { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 import { image1, image5, image2, image4, image3 } from "../assets/images/index";
-import { dharbadan } from "../collection/dhar";
 
 const initialcontext = {
   dharbadan: [
@@ -73,7 +72,7 @@ const ContextProvider = ({ children }) => {
     <GlobalContextcreated.Provider
       value={{
         dharbadan: state.dharbadan,
-        totalclothes: dharbadan.length,
+        totalclothes: state.dharbadan.length,
         removeClothes,
         addClothes,
         isadded

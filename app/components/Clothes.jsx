@@ -8,10 +8,9 @@ import SearchClothes from "./SearchClothes";
 const Page = () => {
   const [query, setquery] = useState("");
 
-  const filtered = dharbadan.filter(dhar => {
-    return dhar.name.toLowerCase().includes(query.toLowerCase())
-  }
-  );
+  const filtered = dharbadan.filter((dhar) => {
+    return dhar.name.toLowerCase().includes(query.toLowerCase());
+  });
   return (
     <>
       <motion.h1
@@ -23,8 +22,12 @@ const Page = () => {
       >
         Products
       </motion.h1>
-      <SearchClothes query={query}
-      setquery={setquery} />
+      <SearchClothes query={query} setquery={setquery} />
+      <div className="btncloths">
+        <button>Dumar</button>
+        <button>Rag</button>
+        <button>Caruur</button>
+      </div>
       <div className="store">
         {filtered.map((dharka) => (
           <Dharlist

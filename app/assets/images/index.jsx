@@ -7,11 +7,15 @@ import image6 from './6.jpg'
 import nin from './nin.jpg'
 import nin2 from './nin1.jpg'
 import nin3 from './nin2.jpg'
-import image11 from './11.jpg'
 import image7 from './7.jpg'
 import image8 from './8.jpg'
 import image9 from './9.jpg'
+import image14 from './23.jpg'
+import image11 from './11.jpg'
 import image10 from './10.jpg'
+import image12 from './21.jpg'
+import image13 from './22.jpg'
+import image15 from './20.jpg'
 
 
 
@@ -26,9 +30,13 @@ export {
     nin,
     nin2,
     nin3,
-    image10,
     image7,
     image8,
     image9,
-    image11
+   image10,
+    image11,
+    image12,
+    image13,
+    image15,
+    image14,
 }
