@@ -261,11 +261,10 @@ nav ul li a {
 
 .heroIMG {
   width: 60%;
-  height: 40vh;
+  height: 45vh;
   margin-top: 5rem;
   margin-left: 4rem;
   border-radius: 12px;
-  box-shadow: 0px 10px 10px 0 rgba(237, 241, 241, 0.87);
 }
 
 .textHero {
@@ -277,14 +276,14 @@ nav ul li a {
 }
 
 .btnhero {
-  text-align: left;
+  text-align: center;
   padding: 6px 12px;
   border-radius: 12px;
   border-color: var(--second-color);
   outline: none;
+  font-size: 1.4rem;
   margin-left: 1rem;
   cursor: pointer;
-  display: block;
 }
 
 .textHero h1 {
@@ -309,6 +308,9 @@ nav ul li a {
   .heroHomePage {
     width: 95%;
   }
+  .heroIMG{
+    margin-left: 6rem;
+  }
   .textHero h1 {
     white-space: nowrap;
     font-size: 4rem;
@@ -316,9 +318,10 @@ nav ul li a {
   }
   .textHero {
     position: absolute;
-    left: 10%;
+    left: 1%;
     top: 55%;
   }
+  
 
   .heroHaye {
     grid-template-columns: repeat(1, 1fr);
@@ -337,9 +340,9 @@ nav ul li a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
-  height: 10vh;
-  border-radius: 50%;
+  width: 40%;
+  height: 20vh;
+  border-radius: 12px;
   aspect-ratio: 1/1;
 }
 
@@ -359,6 +362,12 @@ nav ul li a {
   color: var(--second-color);
 }
 
+@media (max-width: 900px) {
+  .heroBottoms{
+    display: none;
+  }
+}
+
 /* collection */
 .collections {
   color: black;
@@ -369,7 +378,7 @@ nav ul li a {
 }
 
 .collectionTitle {
-  margin-top: 4rem;
+  margin-top: 8rem;
   color: var(--main-color);
   text-align: center;
   font-size: 4rem;
@@ -620,10 +629,8 @@ nav ul li a {
 
 .badge {
   position: absolute;
-  top: 3%;
+  top: 0%;
   right: 4.5%;
-  /*   background-color: var(--main-color);
- */
   border-radius: 12px;
   color: white;
   font-size: 1.4rem;

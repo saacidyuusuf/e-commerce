@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { image11,} from "../assets/images/index";
+import { heroimg} from "../assets/images/index";
 import { textVariant, slideIn, staggerContainer} from "../utilist/motion";
 import Image from "next/image";
 import HeroBottom from "./HeroBottomitems";
@@ -12,7 +12,7 @@ const Hero = () => {
         variants={slideIn("left", "tween", 0.12, 0.5)}
         initial="hidden"
         whileInView="show"
-        className="heroIMG" src={image11} />
+        className="heroIMG" src={heroimg} />
         <motion.div
           className="textHero"
           variants={staggerContainer}

@@ -16,6 +16,7 @@ import image10 from './10.jpg'
 import image12 from './21.jpg'
 import image13 from './22.jpg'
 import image15 from './20.jpg'
+import heroimg from './heroimg.png'
 
 
 
@@ -39,4 +40,5 @@ export {
     image13,
     image15,
     image14,
+    heroimg
 }

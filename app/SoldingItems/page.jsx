@@ -12,7 +12,7 @@ const CartPage = () => {
     <>
       <div className="cartPage">
         <h1>Shopping Cart</h1>
-        <p>{totalclothes} Course in cart</p>
+        <p>{totalclothes} Item in cart</p>
         {dharbadan.length === 0 ? (
           <p className="noItem">no item found</p>
         ) : (

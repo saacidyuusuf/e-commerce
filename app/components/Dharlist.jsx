@@ -7,8 +7,7 @@ import { GlobalContextcreated } from "../context/GlobalContext";
 
 const Dharlist = ({ dharka }) => {
   const { addClothes, dharbadan, removeClothes } = useContext(GlobalContextcreated);
-/*   const isItemAdded = isadded(dharka.id);
- */
+
   const isItemAdded = dharbadan.some((item) => item.id === dharka.id);
 
   const handleAddToCart = () => {
@@ -27,7 +26,7 @@ const Dharlist = ({ dharka }) => {
         whileInView="show"
         className="dharHaye"
       >
-        <Link href="/store/dhardetails">
+        <Link href={`/store/dhardetails?id=${dharka.id}`} passHref>
           <Image src={dharka.img} className="clothImg" alt={dharka.name} />
         </Link>
         <div className="priceName">
