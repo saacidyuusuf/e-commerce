@@ -29,16 +29,13 @@ const CartPage = () => {
                       Remove
                     </button>
                   </div>
-                  {/*  <div className="cartpriceInfo">
-                <button>Remove</button>
-              </div> */}
                 </div>
               </>
             ))}
           </>
         )}
-      </div>
       <TotalCart />
+      </div>
     </>
   );
 };

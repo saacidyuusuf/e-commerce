@@ -12,35 +12,19 @@ const Collection = () => {
           <div className="collection-haye">
             <div className="collection">
               <Image src={image5} className="collectionImg" alt="" />
-              <h3>Xamar Wayne</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, vitae?
-              </p>
+              
             </div>
             <div className="collection">
               <Image src={image1} alt="" className="collectionImg" />
-              <h3>Xamar Wayne</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, vitae?
-              </p>
+              
             </div>
             <div className="collection">
               <Image src={image2} alt="" className="collectionImg" />
-              <h3>Xamar Wayne</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, vitae?
-              </p>
+              
             </div>
             <div className="collection">
               <Image src={image3} alt="" className="collectionImg" />
-              <h3>Xamar Wayne</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, vitae?
-              </p>
+             
             </div>
           </div>
           <motion.div
@@ -48,8 +32,7 @@ const Collection = () => {
             initial="hidden"
             whileInView="show"
             className="imgGees"
-            data-aos="slide-left"
-          >
+            data-aos="slide-left">
             <Image src={image4} alt="" className="imgGeesImg" />
             <div className="imgGeesText">
               <h3>Xamar Wayne</h3>

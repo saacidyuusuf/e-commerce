@@ -1,14 +1,15 @@
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import ContextProvider from "./context/GlobalContext";
 import Header from "./components/Header";
 
-const poppins = Poppins(
+const lato = Space_Grotesk(
   {
-    weight: ['400', '600'],
+    weight: ['300', '700'],
     subsets: ['latin'],
   }
 )
+/* Rubik look good Kanit to Space_Grotesk to*/
 
 export const metadata = {
   title: "BaxarCoder",
@@ -18,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={lato.className}>
           <Header/>
         <ContextProvider>
           <main className="container">{children}</main>

@@ -17,18 +17,6 @@ export default (state, action) => {
           dhar.id === action.payload ? { ...dhar, added: true } : dhar
         ),
       };
-    /*  case "add":
-    return {
-        ...state,
-        dharbadan: state.dharbadan.map((dhar) =>
-          dhar.id === action.payload ? { ...dhar, added: true } : dhar
-        ),
-      };
-
-      return {
-        ...state,
-        dharbadan: [action.payload, ...state.dharbadan],
-      }; */
     default:
       return state;
   }

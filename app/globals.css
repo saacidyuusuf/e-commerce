@@ -5,7 +5,7 @@
 }
 
 :root {
-  --main-color: rgba(104, 55, 9, 0.911);
+  --main-color: rgba(172, 101, 36, 0.911);
   --second-color: rgba(34, 238, 170, 0.87);
   /*   --main-color: navy;
  */
@@ -20,24 +20,12 @@ body {
 .home {
   width: 100%;
   height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+ 
 }
 
 .header {
-  background-color: var(--main-color);
-  color: var(--black-color);
-  border-radius: 12px;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  background-color: var(--black-color);
   align-items: center;
-}
-
-.headerSpace {
-  margin-top: 1rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
 }
 
 .liCart {
@@ -78,11 +66,7 @@ nav ul li a {
   font-size: 1.3rem;
 }
 
-@media (max-width: 900px) {
-  .header {
-    margin: 1rem 0rem;
-  }
-}
+
 
 .store {
   width: 95%;
@@ -245,7 +229,7 @@ nav ul li a {
   background-color: black;
   width: 100%;
   height: 100vh;
-  margin: auto;
+  object-fit: contain;
 }
 
 .hero {
@@ -255,49 +239,60 @@ nav ul li a {
 .heroHaye {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* align-items: center;
-  justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
 }
 
 .heroIMG {
-  width: 60%;
-  height: 45vh;
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-left: 4rem;
+  width: 80%;
+  height: 80vh;
   border-radius: 12px;
 }
 
-.textHero {
-  text-align: center;
-  position: absolute;
-  top: 22%;
-  left: 43%;
-  color: white;
+.youngImgs{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
 }
 
-.btnhero {
-  text-align: center;
-  padding: 6px 12px;
-  border-radius: 12px;
-  border-color: var(--second-color);
-  outline: none;
-  font-size: 1.4rem;
-  margin-left: 1rem;
-  cursor: pointer;
+.youngImgs img{
+  width: 100%;
+  height: 30vh;
+  border-radius: 1rem;
+  object-fit: cover;
 }
+
+.textHero{
+  margin-left: 3rem;
+  margin-top: 0rem;
+}
+
 
 .textHero h1 {
+  z-index: 999;
   font-size: 5.5rem;
   text-transform: capitalize;
-  color: rgb(196, 102, 15);
+  color: var(--second-color);
   white-space: nowrap;
 }
 
 .textHero p {
-  text-align: center;
+  text-align: left;
   color: white;
   font-size: 1rem;
   white-space: wrap;
+}
+
+.learnmore{
+  padding: 8px 20px;
+  border-radius: 4px;
+  color: black;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .textHero span {
@@ -306,25 +301,31 @@ nav ul li a {
 
 @media (max-width: 900px) {
   .heroHomePage {
-    width: 95%;
+    width: 100%;
   }
   .heroIMG{
-    margin-left: 6rem;
+    margin-left: 4.5rem;
   }
   .textHero h1 {
     white-space: nowrap;
-    font-size: 4rem;
+    font-size: 4.8rem;
     text-align: center;
   }
   .textHero {
+    text-align: center;
     position: absolute;
-    left: 1%;
-    top: 55%;
+    left: -5%;
+    top: 20%;
   }
-  
-
+  .textHero p{
+    text-align: center;
+    color: white;
+  }
   .heroHaye {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .youngImgs{
+    display: none;
   }
 }
 
@@ -370,6 +371,7 @@ nav ul li a {
 
 /* collection */
 .collections {
+  position: relative;
   color: black;
   width: 100%;
   display: grid;
@@ -377,8 +379,15 @@ nav ul li a {
   gap: 4rem;
 }
 
+.collectonText{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .collectionTitle {
-  margin-top: 8rem;
   color: var(--main-color);
   text-align: center;
   font-size: 4rem;
@@ -402,15 +411,13 @@ nav ul li a {
 
 .collectionImg {
   width: 110%;
-  height: 35vh;
+  height: 45vh;
   border-radius: 10px;
   display: block;
 }
 
 .collection h3 {
   color: var(--main-color);
-  border-bottom: 2px solid #28a09a;
-  width: 50%;
   white-space: nowrap;
   margin: auto;
   margin-top: 1.2rem;
@@ -421,31 +428,29 @@ nav ul li a {
   text-align: center;
 }
 
-.imgGees {
+.imgGees{
   position: relative;
 }
 
-.imgGeesText {
+.imgGeesText{
   position: absolute;
-  left: 17%;
-  bottom: 35%;
-  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 300ms;
 }
 
-.imgGees:hover .imgGeesText {
-  opacity: 1;
-  transition: 0.1s;
+.imgGees:hover .imgGeesImg{
+  transform: scale(1.0.2);
 }
 
-.imgGeesText h3 {
-  font-size: 2.2rem;
-  margin: 0;
-  color: var(--main-color);
-}
-
-.imgGeesText p {
-  color: var(--black-color);
-  margin: 0;
+.imgGees:hover .imgGeesText{
+  background-color: color-mix(in srgb, black, transparent 80%);
 }
 
 .imgGeesImg {
@@ -453,7 +458,38 @@ nav ul li a {
   width: 98%;
   border-radius: 12px;
   height: 100vh;
+  object-fit: cover;
+  transition: transform 300ms;
 }
+
+.imgGeesImg:hover{
+  transform: translate(0);
+}
+
+.imgGeesText{
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 300ms, font-size 300ms
+}
+
+.imgGees:hover .imgGeesText {
+  font-size: 2rem;
+  text-align: center;
+  opacity: 1;
+
+}
+
+.imgGeesText h3 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: var(--second-color);
+}
+
+.imgGeesText p {
+  color: white;
+  margin: 0;
+}
+
 
 @media (max-width: 900px) {
   .collections {
@@ -630,7 +666,7 @@ nav ul li a {
 .badge {
   position: absolute;
   top: 0%;
-  right: 4.5%;
+  right: 2%;
   border-radius: 12px;
   color: white;
   font-size: 1.4rem;
@@ -715,8 +751,8 @@ nav ul li a {
   }
   .badge {
     position: absolute;
-    top: 2%;
-    right: 8%;
+    top: 0%;
+    right: 4%;
     border-radius: 12px;
     color: white;
     padding: 4px;
