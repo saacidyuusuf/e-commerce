@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={lato.className}>
-          <Header/>
         <ContextProvider>
+          <Header/>
           <main className="container">{children}</main>
         </ContextProvider>
       </body>
