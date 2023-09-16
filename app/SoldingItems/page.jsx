@@ -5,7 +5,7 @@ import TotalCart from "../components/TotalCart";
 import { GlobalContextcreated } from "../context/GlobalContext";
 
 const CartPage = () => {
-  const { dharbadan, totalclothes, removeClothes } =
+  const { dharbadan, totalclothes, removeClothes, products } =
     useContext(GlobalContextcreated);
     
   return (
@@ -21,7 +21,7 @@ const CartPage = () => {
               <>
                 <hr />
                 <div className="cartHaye" key={dhar.id}>
-                  <Image src={dhar.img} className="cartImg" alt="deqo" />
+                  <Image src={dhar.img} width={250} height={200}  className="cartImg" alt="deqo" />
                   <div className="cartInfo">
                     <h3>{dhar.name}</h3>
                     <p>${dhar.price}</p>
@@ -34,7 +34,7 @@ const CartPage = () => {
             ))}
           </>
         )}
-      <TotalCart />
+      <TotalCart products={products}/>
       </div>
     </>
   );

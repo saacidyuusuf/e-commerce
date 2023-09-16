@@ -1,26 +1,17 @@
 /* eslint-disable */
 "use client";
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 import AppReducer from "./AppReducer";
-import { image1, image5, image2, image4, image3 } from "../assets/images/index";
 
 const initialcontext = {
-  dharbadan: [
-   /*  {
-      id: 1,
-      category: "Dhar Nin",
-      name: "Cabdulahi",
-      desc: "dhar Maandeeq Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, commodi laudantium possimus qui omnis porro nesciunt sapiente aliquam ex magni? ",
-      price: 15.25,
-      img: image1,
-    }, */
-  ],
+  dharbadan: [],
   totalclothes: 0,
 };
 
 export const GlobalContextcreated = createContext(initialcontext);
 
 const ContextProvider = ({ children }) => {
+  const [products, setProducts] = useState([]);
   const [state, dispatch] = useReducer(AppReducer, initialcontext);
 
   const addClothes = (dharbadan) => {
@@ -50,7 +41,9 @@ const ContextProvider = ({ children }) => {
         totalclothes: state.dharbadan.length,
         removeClothes,
         addClothes,
-        isadded
+        isadded,
+        products,
+        setProducts
       }}
     >
       {children}

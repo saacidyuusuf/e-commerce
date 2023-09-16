@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { useState} from "react";
 import { TestiData } from "./TestiData";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
-
+import { BsBraces } from "react-icons/bs";
+/* BsBraces */
 const Corousel = () => {
   const [slide, setslide] = useState(0);
 
@@ -15,8 +16,9 @@ const Corousel = () => {
   };
 
   return (
-    <section className="testimonial">
+    <>
       <h1 className='testiTitle'>Testimonial</h1>
+    <section className="testimonial">
     <div className="flex">
       <FaAngleLeft className="left" onClick={prevSlide}/>
       {TestiData.map((data, index) => {
@@ -25,9 +27,15 @@ const Corousel = () => {
             key={index}
             className={slide === index ? "haye" : "haye haye-hidden"}
           >
+            <div className="bracesHaye">
+            <BsBraces className='braces'/>
+            <h3 className='bracesText'>Our Client for past months </h3>
+            </div>
+            <p>{data.desc}</p>
+            <div className="wrap">
             <Image className="image" src={data.img} alt="" />
             <h1>{data.name}</h1>
-            <p>{data.desc}</p>
+            </div>
           </div>
         );
       })}
@@ -45,6 +53,8 @@ const Corousel = () => {
       </span>
     </div>
     </section>
+    </>
+
   );
 };
 

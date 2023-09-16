@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import {
-  image11,
+  heroOne,
   image2,
   image6,
   image7,
@@ -9,7 +9,6 @@ import {
 } from "../assets/images/index";
 import { textVariant, slideIn, staggerContainer } from "../utilist/motion";
 import Image from "next/image";
-import HeroBottom from "./HeroBottomitems";
 
 const Hero = () => {
   return (
@@ -37,10 +36,10 @@ const Hero = () => {
             whileInView="show"
             className="youngImgs"
           >
-            <Image src={image2} />
-            <Image src={image6} />
-            <Image src={image7} />
-            <Image src={image9} />
+            <Image loading="lazy" src={image2} />
+            <Image loading="lazy"  src={image6} />
+            <Image loading="lazy" src={image7} />
+            <Image loading="lazy"  src={image9} />
           </motion.div>
         </motion.div>
         <div className="imgHero">
@@ -49,7 +48,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             className="heroIMG"
-            src={image11}
+            src={heroOne}
           />
         </div>
       </div>

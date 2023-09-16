@@ -18,8 +18,8 @@ import image13 from './22.jpg'
 import image15 from './20.jpg'
 import heroimg from './heroimg.png'
 import herob from './herob.jpg'
-
-
+import heroOne from './heroOne.jpg'
+import dele from './dele.jpg'
 
 
 export {
@@ -42,5 +42,7 @@ export {
     image15,
     image14,
     heroimg,
-    herob
+    herob,
+    heroOne,
+    dele
 }

@@ -3,20 +3,25 @@ import { useContext } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utilist/motion";
+import { supabase } from "./supebase";
+import { useRouter } from "next/navigation";
 import { GlobalContextcreated } from "../context/GlobalContext";
 
-const Dharlist = ({ dharka }) => {
-  const { addClothes, dharbadan, removeClothes } = useContext(GlobalContextcreated);
+const Dharlist = ({id,name, price, img, desc}) => {
+  
+  const { addClothes, dharbadan, removeClothes } =
+    useContext(GlobalContextcreated);
 
-  const isItemAdded = dharbadan.some((item) => item.id === dharka.id);
+  const isItemAdded = dharbadan.some((item) => item.id === id);
 
   const handleAddToCart = () => {
     if (isItemAdded) {
-      removeClothes(dharka.id);
+      removeClothes(id);
     } else {
-      addClothes(dharka);
+      addClothes({id, name, price, img, desc});
     }
   };
+  
 
   return (
     <>
@@ -26,15 +31,15 @@ const Dharlist = ({ dharka }) => {
         whileInView="show"
         className="dharHaye"
       >
-        <Link href={`/store/dhardetails?id=${dharka.id}`} passHref>
-          <Image src={dharka.img} className="clothImg" alt={dharka.name} />
+        <Link href={`/store/dhardetails${id}`} as={`/store/dhardetails/${id}`} passHref>
+          <Image width={300} height={300} src={img} className="clothImg" alt={name} />
         </Link>
         <div className="priceName">
-          <p>${dharka.price}</p>
-          <button  onClick={handleAddToCart}>
+          <p>${price}</p>
+          <button onClick={handleAddToCart}>
             {isItemAdded ? "Already Added" : "Add to Cart"}
           </button>
-          <h3>{dharka.name}</h3>
+          <h3>{name}</h3>
         </div>
       </motion.div>
     </>

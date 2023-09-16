@@ -1,20 +1,33 @@
 "use client";
-import { dharbadan } from "../dhar";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useContext } from "react";
+import { GlobalContextcreated } from "@/app/context/GlobalContext";
 
 const DharDetails = () => {
+  const { products } = useContext(GlobalContextcreated);
   const router = useRouter();
-  const {id} = router.query;
-
-  const selectedDhar = dharbadan.find((dhar) => dhar.id === id);
+  const { id } = router.query || {};
+  const [selectedDhar, setSelectedDhar] = useState(null);
 
   if (!selectedDhar) {
-    return <div>Loading...</div>; // Add a loading state while the data is being fetched
+    return <div>Loading...</div>;
   }
+
+  useEffect(() => {
+    console.log('usefffect')
+    console.log(products)
+    console.log(id)
+    if (products) {
+      setSelectedDhar(foundDhar);
+    }
+    const foundDhar = products.find((dhar) => dhar.id === id);
+  }, [products, id]);
+
   return (
     <section className="dharDetails">
-      <div className="dharInfo" key={selectedDhar.id}>
+      <div className="dharInfo">
         <div className="dharText">
           <h1>{selectedDhar.name}</h1>
           <p>{selectedDhar.desc}</p>
