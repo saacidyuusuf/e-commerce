@@ -5,8 +5,7 @@ import Sliders from "./components/Sliders";
 import Testimonial from "./components/Testimonial";
 import Emailband from "./components/Emailband";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-
+import CollectionLatest from "./components/latestCollection";
 const HomePage = () => {
   return (
     <>
@@ -14,7 +13,7 @@ const HomePage = () => {
         <Hero />
       </section>
       <Clothes />
-      <Sliders />
+      <CollectionLatest/>
       <Testimonial />
       <Emailband />
       <Footer />

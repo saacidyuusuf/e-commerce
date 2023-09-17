@@ -14,7 +14,7 @@ const Emailband = () => {
             <form action="">
                 <label htmlFor="">Email</label>
                 <input type="Email" /><br />
-                <button className='emailbtn'>Submit</button>
+                <button className='shopNow'>Submit</button>
             </form>
         </div>
         </div>

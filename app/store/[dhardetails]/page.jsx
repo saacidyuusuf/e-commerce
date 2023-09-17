@@ -8,36 +8,41 @@ import { GlobalContextcreated } from "@/app/context/GlobalContext";
 const DharDetails = () => {
   const { products } = useContext(GlobalContextcreated);
   const router = useRouter();
-  const { id } = router.query || {};
+  const id = router.query;
   const [selectedDhar, setSelectedDhar] = useState(null);
-
-  if (!selectedDhar) {
-    return <div>Loading...</div>;
-  }
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     console.log('usefffect')
     console.log(products)
     console.log(id)
-    if (products) {
+    if (products && id) {
+      const foundDhar = products.find((dhar) => dhar.id === id);
       setSelectedDhar(foundDhar);
     }
-    const foundDhar = products.find((dhar) => dhar.id === id);
+    setIsLoading(false);
   }, [products, id]);
 
+  if (!id){
+    console.log('no id')
+  }
+  if (isLoading || !selectedDhar) {
+    return <div>Loading...</div>;
+  }
+  
   return (
     <section className="dharDetails">
       <div className="dharInfo">
         <div className="dharText">
-          <h1>{selectedDhar.name}</h1>
-          <p>{selectedDhar.desc}</p>
+          <h1>{selectedDhar?.name}</h1>
+          <p>{selectedDhar?.desc}</p>
         </div>
         <div className="dharImg">
-          <Image src={selectedDhar.img} alt={selectedDhar.name} />
+          <Image src={selectedDhar?.img} alt={selectedDhar?.name} />
           <div className="dharImgText">
-            <h3>{selectedDhar.name}</h3>
+            <h3>{selectedDhar?.name}</h3>
             <h4>
-              Price:<span>${selectedDhar.price}</span>
+              Price:<span>${selectedDhar?.price}</span>
             </h4>
           </div>
         </div>

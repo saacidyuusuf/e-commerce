@@ -153,3 +153,34 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+ const [loading, setLoading] = useState(false);
+
+  const checkout = async () => {
+    setLoading(true);
+    const response = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ products }),
+    });
+    if (!response.ok) {
+      console.error('Checkout request failed:', response);
+      setLoading(false);
+      return;
+    }
+    try {
+      const data = await response.json();
+      const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+      await stripe.redirectToCheckout({ sessionId: data.id });
+    } catch (error) {
+      console.error('Failed to parse response as JSON:', error);
+      setLoading(false);
+    }
+  };
+
+
+
+

@@ -16,6 +16,7 @@
     "express": "^4.18.2",
     "framer-motion": "^10.16.1",
     "next": "13.4.12",
+    "ngrok": "^5.0.0-beta.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",

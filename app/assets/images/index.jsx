@@ -20,6 +20,12 @@ import heroimg from './heroimg.png'
 import herob from './herob.jpg'
 import heroOne from './heroOne.jpg'
 import dele from './dele.jpg'
+import latest1 from './latest1.jpg'
+import latest2 from './latest2.jpg'
+import latest3 from './latest3.jpg'
+import latest4 from './latest4.jpg'
+import man from './man.jpg'
+import girl from './girls.jpg'
 
 
 export {
@@ -44,5 +50,11 @@ export {
     heroimg,
     herob,
     heroOne,
-    dele
+    dele,
+    latest1,
+    latest2,
+    latest3,
+    latest4,
+    man,
+    girl
 }
