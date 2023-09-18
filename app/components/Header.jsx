@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import { FaShoppingCart } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { GlobalContextcreated } from "../context/GlobalContext";
-import Nav from "./Nav";
+
 const Header = () => {
   const [mobile, setmobile] = useState(false);
   const { totalclothes } = useContext(GlobalContextcreated);
-
   return (
     <>
       <motion.header>
@@ -44,6 +43,7 @@ const Header = () => {
           </div>
         </motion.nav>
       </motion.header>
+     
     </>
   );
 };

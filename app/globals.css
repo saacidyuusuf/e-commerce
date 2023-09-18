@@ -103,19 +103,21 @@ nav ul li a {
 
 .close .menuone {
   transform: rotate(-45deg) translate(-10px, 5px);
-  width: 200%;
+  width: 20%;
+  text-align: right;
 }
 
-.close .menu-two {
+.close .menutwo {
   opacity: 0;
 }
 
 .close .menuthree {
-  width: 200%;
+  width: 20%;
+  text-align: right;
   transform: rotate(45deg) translate(-10px, -10px);
 }
 
-.z-index {
+.zindex {
   z-index: 999999;
 }
 
@@ -134,31 +136,29 @@ section.hero {
     margin: 0.3rem 0.5rem;
   }
   .navmenu {
+    display:  block;
     position: fixed;
     right: 0px;
     top: 0;
     height: 100vh;
-    background-color: white;
+    background-color: black;
     width: 50%;
     text-transform: uppercase;
     list-style-type: none;
-    color: #000;
+    color: white;
     z-index: 9999;
     transform: translateX(100%);
     transition: trasform 1s ease-in-out;
-  }
-  .close .menu-two {
-    opacity: 0;
   }
   .navmenu {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    color: black;
+    color: white;
   }
   .navmenu ul {
     list-style-type: none;
-    margin-top: 8em;
+    margin-top: 2em;
   }
   .navmenu a {
     color: white;
@@ -565,7 +565,6 @@ section.hero {
   position: relative;
 }
 
-
 .imgGees {
   position: relative;
 }
@@ -611,7 +610,7 @@ section.hero {
   font-size: 2.5rem;
 }
 
-.shopNow{
+.shopNow {
   padding: 10px 20px;
   white-space: wrap;
   margin-top: 0.1rem;
@@ -935,7 +934,7 @@ textarea {
   outline: none;
   border-color: var(--main-color);
   width: 150%;
-  padding: 0.30rem;
+  padding: 0.3rem;
 }
 
 .formHaye input::placeholder,
@@ -1024,7 +1023,6 @@ textarea::placeholder {
   cursor: pointer;
 }
 
-
 .cartImg {
   margin-bottom: 1rem;
   border-radius: 12px;
@@ -1056,7 +1054,6 @@ textarea::placeholder {
     color: white;
     padding: 4px;
   }
-  
 }
 
 /* Total */
@@ -1096,55 +1093,55 @@ textarea::placeholder {
 
 /* latest */
 
-.latest{
+.latest {
   width: 90%;
   margin: auto;
 }
 
-.latestInfo{
+.latestInfo {
   display: flex;
   gap: 2rem;
   margin-bottom: 1rem;
 }
 
-.latest h1{
+.latest h1 {
   color: var(--main-color);
   margin-bottom: 1rem;
   font-size: 2.4rem;
 }
 
-.latestInfoImg{
+.latestInfoImg {
   width: 70%;
   height: 50vh;
 }
 
-.latestText{
+.latestText {
   padding: 1rem;
 }
 
-.latestText h2{
+.latestText h2 {
   margin-bottom: 1.2rem;
 }
 
-.latestColl{
+.latestColl {
   display: flex;
   gap: 4rem;
   justify-content: center;
   align-items: center;
 }
 
-.latestImgHaye{
+.latestImgHaye {
   width: 100%;
   position: relative;
 }
 
-.latestImg{
+.latestImg {
   width: 100%;
   height: 40vh;
   border-radius: 1rem;
 }
 
-.btn{
+.btn {
   display: flex;
   justify-content: start;
   padding: 10px 20px;
@@ -1153,7 +1150,7 @@ textarea::placeholder {
   border-color: var(--main-color);
 }
 
-.cartTop{
+.cartTop {
   position: absolute;
   top: 50%;
   left: 45%;
@@ -1168,22 +1165,20 @@ textarea::placeholder {
   transition: 0.4s ease-in-out;
 }
 
-.latestImgHaye:hover .cartTop{
+.latestImgHaye:hover .cartTop {
   opacity: 1;
 }
 
-
 @media (max-width: 900px) {
-  .latestImg{
+  .latestImg {
     width: 120%;
     margin: auto;
   }
-  .cartTop{
+  .cartTop {
     left: 45%;
     width: 40%;
   }
 }
-
 
 /* email */
 
@@ -1242,8 +1237,6 @@ textarea::placeholder {
   font-size: 1.4rem;
 }
 
-
-
 @media (max-width: 900px) {
   .emailimg {
     top: 63.2%;
@@ -1264,7 +1257,6 @@ textarea::placeholder {
   background-color: black;
   width: 100%;
   margin: auto;
-  
 }
 
 .footers {
