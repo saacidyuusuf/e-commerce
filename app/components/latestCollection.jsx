@@ -5,6 +5,7 @@ import { GlobalContextcreated } from "../context/GlobalContext";
 import { useContext } from "react";
 import { useRouter } from "next/navigation";
 
+
 const CollectionLatest = ({ id, name, price, img, desc }) => {
   const { addClothes, dharbadan, removeClothes } =
     useContext(GlobalContextcreated);
@@ -48,8 +49,7 @@ const CollectionLatest = ({ id, name, price, img, desc }) => {
         <div className="latestImgHaye">
           <Image className="latestImg" src={latest3} />
           <FaShoppingCart onClick={clickHandler}  className="cartTop" />
-{/*           {isItemAdded ? "Already Added" : "Add to Cart"}
- */}        </div>
+       </div>
         <div className="latestImgHaye">
           <Image className="latestImg" src={latest4} />
           <FaShoppingCart onClick={clickHandler} className="cartTop" />

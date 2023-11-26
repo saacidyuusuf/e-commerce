@@ -18,9 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={lato.className}>
+      <body>
           <ContextProvider>
-            <Header />
+            <Header/>
             <main className="container">{children}</main>
           </ContextProvider>
       </body>

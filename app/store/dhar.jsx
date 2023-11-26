@@ -1,4 +1,4 @@
-//maandeeq: price_1NnLdDHahUokiXyYyvDhdUcc
+/* //maandeeq: price_1NnLdDHahUokiXyYyvDhdUcc
 // cabdulahi: price_1NnLetHahUokiXyYrs8ILgPP
 // samiiro: price_1NnLg0HahUokiXyYwxGxZtBt
 import {image1, image5, image2, image4, image3, image14, image8} from '../assets/images/index'
@@ -54,5 +54,6 @@ export  const  dharbadan = [
     desc: 'dhar xayaat Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, commodi laudantium possimus qui omnis porro nesciunt sapiente aliquam ex magni? ',
     price: 11,
     img: image8,
-  }, */
+  },
 ];
+ */

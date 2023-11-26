@@ -1,6 +1,6 @@
 "use client";
 import Hero from "./components/Hero";
-import Clothes from "./components/Collection";
+import Clothes from "./components/products";
 import Sliders from "./components/Sliders";
 import Testimonial from "./components/Testimonial";
 import Emailband from "./components/Emailband";
