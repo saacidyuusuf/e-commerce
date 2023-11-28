@@ -88,7 +88,7 @@ body {
 
 
 .header {
-  background-color: #9e9999bb;
+  background-color: #535050bb;
   width: 100%;
   position: fixed;
   top: 0;
@@ -186,7 +186,6 @@ body {
   }
   .header {
     gap: 23rem;
-    margin-top: 0.30rem;
   }
 }
 
@@ -320,6 +319,7 @@ body {
 
 .priceName h3 {
   font-size: 1.5rem;
+  color: var(--second-color);
 }
 
 .dharImg h3 {
@@ -438,6 +438,8 @@ body {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 1rem;
+  text-align: center;
+  align-items: center;
 }
 
 .Price {

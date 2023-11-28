@@ -57,8 +57,7 @@ const CoupleProducts = () => {
                 price={dharka.price}
                 name={dharka.name}
                 desc={dharka.desc}
-                key={dharka.id}
-              />
+                key={dharka.id}/>
           ))
         ) : (
           <p className="loading">Loading...</p>
