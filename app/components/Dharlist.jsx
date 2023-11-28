@@ -8,9 +8,9 @@ import { useRouter } from "next/navigation";
 import { GlobalContextcreated } from "../context/GlobalContext";
 
 const Dharlist = ({ id, name, price, img, desc }) => {
-  const { addClothes, dharbadan, removeClothes,} =
+  const { addClothes, dharbadan, removeClothes } =
     useContext(GlobalContextcreated);
-    const router = useRouter()
+  const router = useRouter();
   const isItemAdded = dharbadan.some((item) => item.id === id);
 
   const handleAddToCart = () => {
@@ -21,9 +21,9 @@ const Dharlist = ({ id, name, price, img, desc }) => {
     }
   };
 
-/*   const handleClick = (id) => {
+/*const handleClick = (id) => {
     router.push(`/store/dhardetails${id}`);
-  }; */
+};*/
 
   return (
     <>
@@ -31,19 +31,17 @@ const Dharlist = ({ id, name, price, img, desc }) => {
         variants={fadeIn}
         initial="hidden"
         whileInView="show"
-        className="dharHaye"
-      >
-         <Link href={`/store/dhardetails${id}`} passHref>
-         <Image
+        className="dharHaye">
+        <Link href={`/store/dhardetails${id}`} passHref>
+          <Image
             width={300}
             height={300}
             src={img}
             className="clothImg"
             alt={name}
-            onClick={() =>{}}
-          />
-         </Link>
-     <div className="priceName">
+            onClick={() => {}}/>
+        </Link>
+        <div className="priceName">
           <p>${price}</p>
           <button onClick={handleAddToCart}>
             {isItemAdded ? "Already Added" : "Add to Cart"}

@@ -1,18 +1,20 @@
 "use client";
 import Hero from "./components/Hero";
-import Clothes from "./components/products";
+import Product from "./components/products";
 import Sliders from "./components/Sliders";
 import Testimonial from "./components/Testimonial";
 import Emailband from "./components/Emailband";
 import Footer from "./components/Footer";
 import CollectionLatest from "./components/latestCollection";
+import Header from "./components/Header";
 const HomePage = () => {
   return (
     <>
       <section className="heroHomePage">
         <Hero />
+        <Header/>
       </section>
-      <Clothes />
+      <Product/>
       <CollectionLatest/>
       <Testimonial />
       <Emailband />

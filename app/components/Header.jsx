@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaShoppingCart } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { GlobalContextcreated } from "../context/GlobalContext";
-import {FaBars,} from 'react-icons/fa'
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [mobile, setmobile] = useState(false);
@@ -12,11 +12,10 @@ const Header = () => {
 
   return (
     <>
-      <motion.header>
-        <motion.nav className="header">
+      <div className="header">
           <div className="searchlogo">
             <Link className="logo" href="/">
-              BaxarCoder
+              Baxar<span className="coder">Coder</span>
             </Link>
           </div>
           <div className="navmenu">
@@ -45,25 +44,20 @@ const Header = () => {
             )}
           </div>
           <div
-            className={mobile === true ? "close menuoepenka" : "menu"}
+            className={mobile === true ? "menu" : "menu"}
             onClick={() => setmobile(true)}
           >
-            <div className="menuone"></div>
-            <div className="menutwo"></div>
-            <div className="menuthree"></div>
+            <FaBars  />
           </div>
-        </motion.nav>
-      </motion.header>
+      </div>
 
       {mobile && (
         <div className="mobile">
           <motion.nav className="navheader">
             <div className="navmenuMobile">
-          <div onClick={() => setmobile(false)} >
-            <div className="menuone"></div>
-            <div className="menutwo"></div>
-            <div className="menuthree"></div>
-          </div>
+              <div onClick={() => setmobile(false)}>
+                <FaTimes className="close" />
+              </div>
               <ul>
                 <li>
                   <Link href="/">Home</Link>

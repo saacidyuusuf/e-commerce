@@ -26,7 +26,7 @@ const CollectionLatest = ({ id, name, price, img, desc }) => {
 
   return (
     <div className="latest">
-      <h1>Latest Collection</h1>
+      <h1>Latest Products</h1>
       <div className="latestInfo">
         <Image className="latestInfoImg" src={latest1} />
         <div className="latestText">

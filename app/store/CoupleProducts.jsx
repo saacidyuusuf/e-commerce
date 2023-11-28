@@ -7,23 +7,25 @@ import { motion } from "framer-motion";
 import supabase from "../components/supebase";
 import SearchClothes from "../components/SearchClothes";
 import { GlobalContextcreated } from "../context/GlobalContext";
+import Product from '../components/products'
 
-const Page = () => {
-  const [query, setquery] = useState("");
+const CoupleProducts = () => {
   const { products ,setProducts } = useContext(GlobalContextcreated);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data, error } = await supabase.from("Product").select("*");
+        const { data, error } = await supabase.from("Product")
+        .select("id, price, desc, name ,img")
+        .limit(3);
         if (error) {
           setError(error);
           setProducts(null);
         } else {
           setProducts(data);
           setError(null);
-          console.log(data);
+          console.log(data)
         }
       } catch (error) {
         console.error(error);
@@ -33,46 +35,27 @@ const Page = () => {
     }
     fetchData();
   }, []);
-
-  const filtered = products ? products.filter((dhar) => {
-    return dhar.name.toLowerCase().includes(query.toLowerCase());
-  }) : [];
-  
-
+ 
   return (
     <>
-      <motion.h1
-        variants={navVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="product"
-      >
-        Products
-      </motion.h1>
-      <SearchClothes query={query} setquery={setquery} />
-      <div className="btncloths">
-        <button>Dumar</button>
-        <button>Rag</button>
-        <button>Caruur</button>
-      </div>
       <div className="store">
-        {filtered.length > 0 ? (
-          filtered.map((dharka) => (
-            <Dharlist
+        {products.length > 0 ? (
+          products.map((dharka) => (
+            <Product
               id={dharka.id}
               img={dharka.img}
               price={dharka.price}
               name={dharka.name}
               desc={dharka.desc}
-              key={dharka.id}  />
+              key={dharka.id}/>
           ))
-        ) : (
-          <p className="loading">Loading...</p>
-        )}
+          ) : (
+            <p className="loading">Loading...</p>
+            )}
       </div>
     </>
   );
 };
+console.log(products)
 
-export default Page;
+export default CoupleProducts;
