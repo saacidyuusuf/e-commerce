@@ -7,6 +7,8 @@ import Emailband from "./components/Emailband";
 import Footer from "./components/Footer";
 import CollectionLatest from "./components/latestCollection";
 import Header from "./components/Header";
+import CoupleProducts from "./store/CoupleProducts";
+
 const HomePage = () => {
   return (
     <>
@@ -14,7 +16,7 @@ const HomePage = () => {
         <Hero />
         <Header/>
       </section>
-      <Product/>
+        <CoupleProducts/>
       <CollectionLatest/>
       <Testimonial />
       <Emailband />

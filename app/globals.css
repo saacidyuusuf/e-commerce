@@ -88,9 +88,11 @@ body {
 
 
 .header {
+  background-color: #9e9999bb;
+  width: 100%;
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   display: flex;
   justify-content: flex-end;
   gap: 50rem;
@@ -435,7 +437,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  margin-left: 4rem;
   gap: 1rem;
 }
 
@@ -448,11 +449,11 @@ body {
   color: black;
 }
 
-.collectionImg {
+/* .collectionImg {
   width: 95%;
   height: 45vh;
   border-radius: 10px;
-}
+} */
 
 .collection {
   position: relative;
@@ -502,7 +503,7 @@ body {
 @media (max-width: 900px) {
   .collectionhaye {
     grid-template-columns: repeat(1, 1fr);
-    margin-left: 4rem;
+    place-items: center;
   }
   .collection .cartTop {
     background-color: none;
@@ -980,11 +981,11 @@ textarea::placeholder {
 .cartTop {
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 50%;
   width: 15%;
   margin: auto;
   height: 15%;
-  color: white;
+  color: var(--main-color);
   font-size: 1rem;
   background-color: var(--second-color);
   border-radius: 1rem;

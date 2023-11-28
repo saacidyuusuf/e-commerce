@@ -18,8 +18,7 @@ const ContextProvider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [User, setUser] = useState(null);
-  const router = useRouter()
-  
+  const router = useRouter();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -32,7 +31,7 @@ const ContextProvider = ({ children }) => {
         console.error("Sign-up error:", error);
       } else {
         setUser(user);
-        router.push('/')
+        router.push("/");
         console.log("Sign-up successful:", user);
       }
     } catch (error) {
@@ -75,7 +74,7 @@ const ContextProvider = ({ children }) => {
         password,
         setPassword,
         handleSignUp,
-        User
+        User,
       }}
     >
       {children}
