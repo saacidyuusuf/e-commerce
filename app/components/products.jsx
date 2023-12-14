@@ -33,7 +33,7 @@ const Product = ({ name, id, img, desc, price }) => {
         <div className="collection">
           <div className="collectionImgHaye">
             <h3 className="Price">{price}</h3>
-            <Image src={img} alt="h"   width={300}
+            <Image src={img} alt="h"  width={350}
             height={300}  className="collectionImg" />
             <FaShoppingCart onClick={handleAddToCart} className="cartTop" />
           </div>

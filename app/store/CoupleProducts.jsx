@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
-import { dharbadan } from "./dhar";
+
 import Dharlist from "../components/Dharlist";
 import { navVariants } from "../utilist/motion";
 import { motion } from "framer-motion";

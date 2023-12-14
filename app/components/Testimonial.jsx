@@ -25,8 +25,7 @@ const Corousel = () => {
         return (
           <div
             key={index}
-            className={slide === index ? "haye" : "haye haye-hidden"}
-          >
+            className={slide === index ? "haye" : "haye haye-hidden"}>
             <div className="bracesHaye">
             <BsBraces className='braces'/>
             <h3 className='bracesText'>Our Client for past months </h3>
@@ -54,7 +53,6 @@ const Corousel = () => {
     </div>
     </section>
     </>
-
   );
 };
 
