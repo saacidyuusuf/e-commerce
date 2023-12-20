@@ -1,6 +1,6 @@
 /* eslint-disable */
 "use client";
-import { createContext, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import AppReducer from "./AppReducer";
 import supabase from "../components/supebase";
 import { useRouter } from "next/navigation";
@@ -19,6 +19,8 @@ const ContextProvider = ({ children }) => {
   const [password, setPassword] = useState("");
   const [User, setUser] = useState(null);
   const router = useRouter();
+  const [error, setError] = useState(null);
+
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -38,6 +40,27 @@ const ContextProvider = ({ children }) => {
       console.error("Sign-up error:", error);
     }
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const { data, error } = await supabase.from("Product").select("*");
+        if (error) {
+          setError(error);
+          setProducts(null);
+        } else {
+          setProducts(data);
+          setError(null);
+          console.log(data);
+        }
+      } catch (error) {
+        console.error(error);
+        setError(error.message);
+        setProducts(null);
+      }
+    }
+    fetchData();
+  }, []);
 
   const addClothes = (dharbadan) => {
     dispatch({
@@ -68,7 +91,6 @@ const ContextProvider = ({ children }) => {
         addClothes,
         isadded,
         products,
-        setProducts,
         email,
         setEmail,
         password,

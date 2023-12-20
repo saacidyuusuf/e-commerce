@@ -21,9 +21,9 @@ const Dharlist = ({ id, name, price, img, desc }) => {
     }
   };
 
-/*const handleClick = (id) => {
-    router.push(`/store/dhardetails${id}`);
-};*/
+  const handleClick = () => {
+    router.push(`/store/dhardetails?id=${id}`);
+  };
 
   return (
     <>
@@ -31,16 +31,17 @@ const Dharlist = ({ id, name, price, img, desc }) => {
         variants={fadeIn}
         initial="hidden"
         whileInView="show"
-        className="dharHaye">
-        <Link href={`/store/dhardetails${id}`} passHref>
+        className="dharHaye"
+      >
+        <button onClick={handleClick}>
           <Image
             width={300}
             height={300}
             src={img}
             className="clothImg"
             alt={name}
-            onClick={() => {}}/>
-        </Link>
+          />
+        </button>
         <div className="priceName">
           <p>${price}</p>
           <button onClick={handleAddToCart}>

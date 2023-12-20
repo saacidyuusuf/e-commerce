@@ -9,29 +9,8 @@ import { GlobalContextcreated } from "../context/GlobalContext";
 
 const Page = () => {
   const [query, setquery] = useState("");
-  const { products ,setProducts } = useContext(GlobalContextcreated);
-  const [error, setError] = useState(null);
+  const { products} = useContext(GlobalContextcreated);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const { data, error } = await supabase.from("Product").select("*");
-        if (error) {
-          setError(error);
-          setProducts(null);
-        } else {
-          setProducts(data);
-          setError(null);
-          console.log(data);
-        }
-      } catch (error) {
-        console.error(error);
-        setError(error.message);
-        setProducts(null);
-      }
-    }
-    fetchData();
-  }, []);
 
   const filtered = products ? products.filter((dhar) => {
     return dhar.name.toLowerCase().includes(query.toLowerCase());

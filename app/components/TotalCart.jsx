@@ -32,7 +32,7 @@ const TotalCart = () => {
     }
   };
 
-  const addedToCart = products.filter((item) =>
+  const addedToCart = products?.filter((item) =>
     dharbadan.some((addedItem) => addedItem.id === item.id)
   );
   console.log(addedToCart)

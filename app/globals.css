@@ -7,6 +7,7 @@
 }
 
 body {
+  margin: 0;
   background-color: black;
   font-family: "Kaushan Script", cursive;
 }
@@ -232,8 +233,10 @@ body {
 }
 
 .dharDetails {
+  color: white;
   width: 90%;
   margin: auto;
+  margin-top: 2rem;
 }
 
 .dharInfo {
@@ -249,26 +252,34 @@ body {
 }
 
 .dharText {
+  cursor: pointer;
+  color: white;
   width: 55%;
   height: 50vh;
   margin-top: 0rem;
 }
 
 .dharText h1 {
-  color: var(--second-color);
   margin-bottom: 1.2rem;
   font-size: 3rem;
 }
 
 .dharText p {
   line-height: 1.5;
-  color: var(--black-color);
 }
 
 .dharHaye {
   position: relative;
   color: var(--black-color);
   text-align: center;
+}
+
+.dharHaye button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-color: none;
+  background: none;
 }
 
 .clothImg {
@@ -982,6 +993,7 @@ textarea::placeholder {
   border-radius: 1rem;
   margin-top: 1rem;
   border-color: var(--main-color);
+  font-size: 1.3rem;
 }
 
 .cartTop {
