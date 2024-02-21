@@ -6,58 +6,53 @@ import { useContext, useState } from "react";
 import { GlobalContextcreated } from "../context/GlobalContext";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ user }) => {
   const [mobile, setmobile] = useState(false);
-  const { totalclothes, User } = useContext(GlobalContextcreated);
+  const { totalclothes } = useContext(GlobalContextcreated);
 
   return (
     <>
       <div className="header">
-          <div className="searchlogo">
-            <Link className="logo" href="/">
-              Baxar<span className="coder">Coder</span>
+        <Link className="logo" href="/">
+          Baxar<span className="coder">Coder</span>
+        </Link>
+        <div className="navmenu">
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/store">Store</Link>
+            </li>
+            <li>
+              <Link href="/Contact">Contact</Link>
+            </li>
+          </ul>
+          {!user ? (
+            <Link href="/Auth" className="signup">
+              Sign Up
             </Link>
-          </div>
-          <div className="navmenu">
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/store">Store</Link>
-              </li>
-              <li>
-                <Link href="/Contact">Contact</Link>
-              </li>
-            </ul>
-            {User ? (
-              <Link href="/Auth/signup/signup" className="signup">
-                Sign Up
+          ) : (
+            <div className="cartBox">
+              <Link className="visible" href="/SoldingItems">
+                <span className="badge">{totalclothes}</span>
+                <FaShoppingCart className="cart" />
               </Link>
-            ) : (
-              <div className="cartBox">
-                <Link className="visible" href="/SoldingItems">
-                  <span className="badge">{totalclothes}</span>
-                  <FaShoppingCart className="cart" />
-                </Link>
-              </div>
-            )}
-          </div>
-          <div
-            className={mobile === true ? "menu" : "menu"}
-            onClick={() => setmobile(true)}
-          >
-            <FaBars  />
-          </div>
+            </div>
+          )}
+        </div>
+        <div
+          className={mobile === true ? "menu" : "menu"}
+          onClick={() => setmobile(!mobile)}
+        >
+          <FaBars />
+        </div>
       </div>
 
       {mobile && (
         <div className="mobile">
           <motion.nav className="navheader">
             <div className="navmenuMobile">
-              <div onClick={() => setmobile(false)}>
-                <FaTimes className="close" />
-              </div>
               <ul>
                 <li>
                   <Link href="/">Home</Link>
@@ -68,19 +63,19 @@ const Header = () => {
                 <li>
                   <Link href="/Contact">Contact</Link>
                 </li>
-              </ul>
-              {User ? (
-                <Link href="/Auth/signup/signup" className="signup">
-                  Sign Up
-                </Link>
-              ) : (
-                <div className="cartBox">
-                  <Link className="visible" href="/SoldingItems">
-                    <span className="badge">{totalclothes}</span>
-                    <FaShoppingCart className="cart" />
+                {!user ? (
+                  <Link href="/Auth/signup/signup" className="signup">
+                    <li>Sign Up</li>
                   </Link>
-                </div>
-              )}
+                ) : (
+                  <div className="cartBox">
+                    <Link className="visible" href="/SoldingItems">
+                      <span className="badge">{totalclothes}</span>
+                      <FaShoppingCart className="cart" />
+                    </Link>
+                  </div>
+                )}
+              </ul>
             </div>
           </motion.nav>
         </div>

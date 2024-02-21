@@ -27,13 +27,13 @@ const Product = ({ name, id, img, desc, price }) => {
           variants={textVariant(1.2)}
           initial="hidden"
           whileInView="show"
-          className="collection" >
-
+          className="collection">
+            
           </motion.div>
         <div className="collection">
           <div className="collectionImgHaye">
             <h3 className="Price">{price}</h3>
-            <Image src={img} alt="h"  width={350}
+            <Image src={img} alt="h" width={300}
             height={300}  className="collectionImg" />
             <FaShoppingCart onClick={handleAddToCart} className="cartTop" />
           </div>

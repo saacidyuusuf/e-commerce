@@ -6,7 +6,6 @@ import { slideIn, navVariants, textVariant } from "../utilist/motion";
 
 const Sliders = () => {
   const [width, setwidth] = useState(0);
-
   const slide = useRef();
 
   useEffect(() => {

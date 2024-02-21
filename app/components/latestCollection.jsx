@@ -41,6 +41,7 @@ const CollectionLatest = ({ id, name, price, img, desc }) => {
           <button className="btn">Read More</button>
         </div>
       </div>
+
       <div className="latestColl">
         <div className="latestImgHaye">
           <Image className="latestImg" src={latest2} />

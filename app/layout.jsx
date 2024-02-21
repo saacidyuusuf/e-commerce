@@ -16,11 +16,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const user = false;
+  
   return (
     <html lang="en">
       <body>
           <ContextProvider>
-            <Header/>
+            <Header user={user}/>
             <main className="container">{children}</main>
           </ContextProvider>
       </body>

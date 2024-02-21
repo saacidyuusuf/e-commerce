@@ -1,5 +1,10 @@
 'use client'
 import React from "react";
+import {
+  FaGithub,
+  FaGoogle
+} from "react-icons/fa";
+import Link from "next/link";
 import { useContext } from "react";
 import { GlobalContextcreated } from "@/app/context/GlobalContext";
 
@@ -24,6 +29,12 @@ const SignUpLink = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Sign Up</button>
+        <Link href=''>
+        <FaGoogle className="google"/>
+        </Link>
+        <Link href=''>
+        <FaGithub className="github"/>
+        </Link>
       </form>
     </div>
   );

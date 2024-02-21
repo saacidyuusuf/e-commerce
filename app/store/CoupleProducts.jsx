@@ -10,7 +10,6 @@ import Product from "../components/products";
 import { useRouter } from "next/navigation";
 import { GlobalContextcreated } from "../context/GlobalContext";
 
-
 const CoupleProducts = () => {
   const router = useRouter();
   const { products, setProducts } = useContext(GlobalContextcreated);
@@ -19,7 +18,6 @@ const CoupleProducts = () => {
   const clickHandler = () => {
     router.push("/store");
   };
-
 
   useEffect(() => {
     async function fetchData() {
@@ -51,19 +49,20 @@ const CoupleProducts = () => {
       <div className="collectionhaye">
         {products && products.length > 0 ? (
           products.map((dharka) => (
-              <Product
-                id={dharka.id}
-                img={dharka.img}
-                price={dharka.price}
-                name={dharka.name}
-                desc={dharka.desc}
-                key={dharka.id}/>
+            <Product
+              id={dharka.id}
+              img={dharka.img}
+              price={dharka.price}
+              name={dharka.name}
+              desc={dharka.desc}
+              key={dharka.id}
+            />
           ))
         ) : (
           <p className="loading">Loading...</p>
         )}
       </div>
-         <div className="allP">
+      <div className="allP">
         <button onClick={clickHandler}>All Products</button>
       </div>
     </>
