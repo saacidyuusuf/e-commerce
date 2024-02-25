@@ -14,13 +14,15 @@ const HomePage = () => {
     <>
       <section className="heroHomePage">
         <Hero />
-        <Header/>
+        <Header />
       </section>
-        <CoupleProducts/>
-      <CollectionLatest/>
-      <Testimonial />
-      <Emailband />
-      <Footer />
+      <section className="center">
+        <CoupleProducts />
+        <CollectionLatest />
+        <Testimonial />
+        <Emailband />
+        <Footer />
+      </section>
     </>
   );
 };

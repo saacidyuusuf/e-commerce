@@ -14,7 +14,7 @@ const Header = ({ user }) => {
     <>
       <div className="header">
         <Link className="logo" href="/">
-          Baxar<span className="coder">Coder</span>
+          Baxar<span className="coder">Flow</span>
         </Link>
         <div className="navmenu">
           <ul>
@@ -64,7 +64,7 @@ const Header = ({ user }) => {
                   <Link href="/Contact">Contact</Link>
                 </li>
                 {!user ? (
-                  <Link href="/Auth/signup/signup" className="signup">
+                  <Link href="/Auth" className="signup">
                     <li>Sign Up</li>
                   </Link>
                 ) : (

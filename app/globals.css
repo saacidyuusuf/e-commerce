@@ -8,7 +8,6 @@
 
 body {
   margin: 0;
-  background-color: black;
   font-family: "Kaushan Script", cursive;
 }
 
@@ -18,7 +17,7 @@ body {
   /* --main-color: #fa3d3b;
   --second-color: #c6c6c6; */
   --main-color: #fa3d3b;
-  --second-color: #c6c6c6;
+  --second-color: #cec9c9;
   --black-color: #1c1c1c;
 }
 
@@ -40,7 +39,7 @@ body {
   width: 40%;
   margin: auto;
   margin-top: 10rem;
-  background-color: #1c1c1c;
+  background-color: #c9c6c6;
   padding: 1rem;
   border-radius: 10px;
 }
@@ -56,18 +55,18 @@ body {
 .github {
   padding-top: 0;
   margin-left: 1rem;
-  color: white;
+  color: black;
   font-size: 1.5rem;
 }
 .google {
   padding-top: 0;
-  color: white;
+  color: black;
   margin-left: 0.4rem;
   font-size: 1.5rem;
 }
 
 .signUpContext h1 {
-  color: white;
+  color: black;
 }
 
 .signUpContext input {
@@ -75,6 +74,7 @@ body {
   width: 80%;
   padding: 8px 20px;
   margin: 1rem;
+  outline: none;
   border-radius: 12px;
 }
 
@@ -122,7 +122,8 @@ body {
   top: 0;
   z-index: 999;
   display: flex;
-  margin-bottom: 3rem;
+  /*   margin-bottom: 3rem;
+ */
 }
 
 .navmenu {
@@ -222,6 +223,25 @@ body {
   }
 }
 
+@media (min-width: 300px) and (max-width: 900px) {
+  .menu {
+    display: block;
+  }
+  .navmenuMobile {
+    display: block;
+    position: absolute;
+    display: grid;
+    left: 88%;
+    top: 2%;
+    width: 45%;
+    height: 94vh;
+    padding: 2rem;
+  }
+  .navmenu {
+    display: none;
+  }
+}
+
 /* store */
 
 .store {
@@ -261,7 +281,7 @@ body {
 }
 
 .dharDetails {
-  color: white;
+  color: black;
   width: 90%;
   margin: auto;
   margin-top: 2rem;
@@ -281,7 +301,7 @@ body {
 
 .dharText {
   cursor: pointer;
-  color: white;
+  color: black;
   width: 55%;
   height: 50vh;
   margin-top: 0rem;
@@ -344,7 +364,7 @@ body {
   border: none;
   font-size: 1.2rem;
   background-color: var(--black-color);
-  color: white;
+  color: black;
 }
 
 .priceName p {
@@ -367,6 +387,7 @@ body {
   margin-bottom: 1.2rem;
   font-size: 1.8rem;
 }
+
 .dharImg span {
   color: burlywood;
   border-bottom: 2px solid #628222;
@@ -404,6 +425,7 @@ body {
   background-image: url(./assets/images/5.jpg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
 }
@@ -424,7 +446,8 @@ body {
 
 .textHero p {
   color: var(--black-color);
-  font-size: 1.3rem;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 
 .learnmore {
@@ -451,7 +474,27 @@ body {
   }
 }
 
-/* herobottom */
+@media (min-width: 300px) and (max-width: 900px) {
+  .hero {
+    background-image: url(./assets/images/5.jpg);
+    width: 170%;
+  }
+  .textHero h1 {
+    white-space: nowrap;
+    font-size: 5.5rem;
+  }
+  /*  .textHero h1 {
+    font-size: 4rem;
+    font-family: "Kaushan Script", cursive;
+    color: var(--main-color);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    white-space: nowrap;
+  }
+  .header {
+    gap: 35rem;
+  } */
+}
 
 /* collection */
 .collections {
@@ -492,12 +535,6 @@ body {
   border-radius: 10px;
   color: black;
 }
-
-/* .collectionImg {
-  width: 95%;
-  height: 45vh;
-  border-radius: 10px;
-} */
 
 .collection {
   position: relative;
@@ -560,6 +597,19 @@ body {
     height: 45vh;
     border-radius: 10px;
   }
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .collectionhaye {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    width: 120%;
+    margin-left: 2rem;
+  }
+ 
 }
 
 /* sliders */
@@ -760,6 +810,19 @@ body {
   }
 }
 
+@media (min-width: 300px) and (max-width: 700px) {
+  .testimonial {
+    text-align: center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1011%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(4%2c 5%2c 6%2c 1)'%3e%3c/rect%3e%3cpath d='M892.1-30.21C802.56-22.47 838.36 151.6 587.8 161.22 337.25 170.84 141.3 381.7-20.79 385.22' stroke='rgba(239%2c 240%2c 242%2c 0.93)' stroke-width='2'%3e%3c/path%3e%3cpath d='M856.38-73.21C732.35-49.48 766.71 264.45 481.32 265.15 195.93 265.85-77.76 120.22-268.79 119.55' stroke='rgba(239%2c 240%2c 242%2c 0.93)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1277.7-68.98C1064.56-41.63 944.47 442.73 589.11 445.5 233.76 448.27 77.4 284.19-99.47 283.1' stroke='rgba(239%2c 240%2c 242%2c 0.93)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1152.05-39.01C999.91-13.13 931.14 356.54 682.15 361.3 433.15 366.06 447.2 291.3 212.24 291.3-22.71 291.3-138.89 361.11-257.66 361.3' stroke='rgba(239%2c 240%2c 242%2c 0.93)' stroke-width='2'%3e%3c/path%3e%3cpath d='M808.82-63.67C652.39-49.69 549.39 273.14 279.2 274.22 9.01 275.3-114.48 151.83-250.42 151.02' stroke='rgba(239%2c 240%2c 242%2c 0.93)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1011'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    z-index: 999;
+    width: 140%;
+    height: 45vh;
+    margin: auto;
+    border-radius: 1.4rem;
+    margin-top: 1rem;
+  }
+}
+
 /* Team */
 
 .Contact {
@@ -792,12 +855,16 @@ body {
 .formHaye input {
   display: block;
   margin: 0.8rem 0;
-  width: 150%;
+  width: 145%;
   padding: 0.5rem;
   outline: none;
   background-color: #efefef;
   border-radius: 10px;
-  border-color: var(--main-color);
+  border-color: black;
+}
+
+.formHaye input::placeholder {
+  font-size: 1.2rem;
 }
 
 .inputGroup {
@@ -807,7 +874,7 @@ body {
 textarea {
   border-radius: 10px;
   outline: none;
-  border-color: var(--main-color);
+  border-color: black;
   width: 150%;
   padding: 0.3rem;
 }
@@ -836,7 +903,14 @@ textarea::placeholder {
     justify-content: left;
   }
   .formHaye input {
-    width: 150%;
+    width: 135%;
+  }
+  textarea {
+    border-radius: 10px;
+    outline: none;
+    border-color: black;
+    width: 135%;
+    padding: 0.3rem;
   }
 }
 
@@ -983,7 +1057,7 @@ textarea::placeholder {
 
 .latestText {
   padding: 1rem;
-  color: white;
+  color: black;
 }
 
 .latestText span {
@@ -993,7 +1067,7 @@ textarea::placeholder {
 
 .latestText h2 {
   margin-bottom: 1.2rem;
-  color: white;
+  color: black;
 }
 
 .latestColl {
@@ -1043,6 +1117,32 @@ textarea::placeholder {
   opacity: 1;
 }
 
+@media (min-width: 300px) and (max-width: 700px) {
+  .latest {
+    text-align: center;
+    margin: auto;
+  }
+  .latestInfoImg {
+    width: 120%;
+    margin: auto;
+    height: 50vh;
+  }
+  .latestColl {
+    display: flex;
+    justify-content: center;
+    width: 160%;
+    align-items: center;
+  }
+  .latestInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 150%;
+  }
+}
+
 @media (max-width: 900px) {
   .latestImg {
     width: 120%;
@@ -1071,7 +1171,7 @@ textarea::placeholder {
   width: 100%;
   height: 80%;
   padding: 40px 0;
-  color: white;
+  color: black;
 }
 
 .emailContent h1 {
@@ -1110,12 +1210,38 @@ form label {
     place-items: center;
   }
 }
+@media (min-width: 300px) and (max-width: 700px) {
+  .emailhaye {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+  .emailContent input{
+    width: 100%;
+  }
+
+  .emailContent {
+    width: 100%;
+    height: 80%;
+    padding: 40px 0;
+    color: black;
+  }
+  .emailimg {
+    width: 170%;
+    height: 60vh;
+    border-radius: 12px;
+  }
+}
+
 /*  footer*/
 
 .footer {
-  background-color: black;
+  /* position:fixed;
+  bottom: 0; */
+  background-color: rgb(22, 18, 18);
   width: 100%;
-  height: 60vh;
+  height: 52vh;
   margin: auto;
 }
 
@@ -1186,6 +1312,22 @@ form label {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
+  .footer {
+    background-color: black;
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .footer {
+    background-color: black;
+    height: 90vh;
+    width: 170%;
+    margin: auto;
+  }
+  
 }
 
 /* search */
@@ -1217,3 +1359,14 @@ form label {
     width: 100%;
   }
 }
+
+/* @media (min-width: 300px) and (max-width: 900px) {
+  .center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+} */
